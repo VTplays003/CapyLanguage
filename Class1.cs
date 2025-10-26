@@ -137,8 +137,12 @@ namespace CapySystem.IO //This namespace will not make any sense, so read the of
 {
     public static class CapyBinaryReader
     {
-
-    }
+        private static BinaryReader reader = new BinaryReader(File.OpenRead("savefile.capy"));
+        public static void CloseStream()
+        {
+            reader.Close();
+        }
+    } 
 }
 
 namespace CapyTextSystem
