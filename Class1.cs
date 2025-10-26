@@ -12,7 +12,11 @@ namespace CapySystem
 
         public static class CapyConsoleProperties
         {
-
+            public static ConsoleColor BackgroundColor
+            {
+                get => Console.BackgroundColor;
+                set => Console.BackgroundColor = value;
+            }
         }
         public static class CapyConsoleMethods
         {
