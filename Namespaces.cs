@@ -132,7 +132,7 @@ namespace CapySystem.IO //This namespace will not make any sense, so read the of
 {
     public static class CapyBinaryReader
     {
-        private static BinaryReader reader = new BinaryReader(File.OpenRead("savefile.capy"));
+        private static BinaryReader reader = new BinaryReader(File.OpenRead("test.capy"));
         public static BinaryReader createBinaryReader(string file)
         {
             return new BinaryReader(File.OpenRead(file));
