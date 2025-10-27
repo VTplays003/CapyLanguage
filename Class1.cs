@@ -1,9 +1,4 @@
-﻿using CapySystem;
-using System;
-using System.Text;
-using System.IO;
-using static CapySystem.CapyConsole;
-using System.Reflection.Metadata.Ecma335;
+﻿using System.Text;
 
 namespace CapySystem
 {
@@ -138,6 +133,10 @@ namespace CapySystem.IO //This namespace will not make any sense, so read the of
     public static class CapyBinaryReader
     {
         private static BinaryReader reader = new BinaryReader(File.OpenRead("savefile.capy"));
+        public static BinaryReader createBinaryReader(string file)
+        {
+            return new BinaryReader(File.OpenRead(file));
+        }
         public static void CloseStream()
         {
             reader.Close();
